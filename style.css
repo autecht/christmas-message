@@ -1,1 +1,14 @@
-
+body.red{
+    background-color:red
+}
+h2{
+    color:green;
+    text-align:center;
+}
+div{
+    width:100%;
+    position:fixed;
+    background-color:white;
+    border:10px outset green;
+    top:20%;
+}
