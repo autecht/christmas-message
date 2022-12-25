@@ -1,6 +1,9 @@
 body.red {
     background-color:red
 }
+#image-body {
+    background-image:images/image1.jpg;
+}
 h2 {
     color:green;
     text-align:center;
@@ -29,4 +32,19 @@ i.index-right {
     font-size: 235%;
     right:10px;
     bottom:10%;
+}
+
+i.image-left {
+    position:fixed;
+    color:green;
+    font-size: 150%;
+    left:5px;
+    bottom:5px;
+}
+i.image-right{
+    position:fixed;
+    color:green;
+    font-size: 150%;
+    right:5px;
+    bottom:5px;
 }

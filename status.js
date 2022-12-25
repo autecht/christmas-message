@@ -1,17 +1,16 @@
-const pageList = [
-    "index.html",
-    "1.html",
-    "2.html",
-    "3.html",
-    "4.html",
-    "5.html",
-    "6.html",
-    "7.html",
-    "8.html",
-    "9.html",
-    "10.html",
-    "11.html",
-    "12.html",
+const imageList = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg",
+    "image4.jpg",
+    "image5.jpg",
+    "image6.jpg",
+    "image7.jpg",
+    "image8.jpg",
+    "image9.jpg",
+    "image10.jpg",
+    "image11.jpg",
+    "image12.jpg",
 ];
 
 function cycleLeft() {
