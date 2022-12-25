@@ -1,9 +1,11 @@
 body.red {
     background-color:red
 }
+
 #image-body {
-    background-image:images/image1.jpg;
+    background-image:url("images/image4.jpg");
 }
+
 h2 {
     color:green;
     text-align:center;
