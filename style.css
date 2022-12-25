@@ -4,6 +4,7 @@ body.red {
 
 #image-body {
     background-image:url("images/image4.jpg");
+    background-size:cover;
 }
 
 h2 {
