@@ -1,16 +1,16 @@
 const imageList = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg",
-    "image4.jpg",
-    "image5.jpg",
-    "image6.jpg",
-    "image7.jpg",
-    "image8.jpg",
-    "image9.jpg",
-    "image10.jpg",
-    "image11.jpg",
-    "image12.jpg",
+    "images/image1.jpg",
+    "images/image2.jpg",
+    "images/image3.jpg",
+    "images/image4.jpg",
+    "images/image5.jpg",
+    "images/image6.jpg",
+    "images/image7.jpg",
+    "images/image8.jpg",
+    "images/image9.jpg",
+    "images/image10.jpg",
+    "images/image11.jpg",
+    "images/image12.jpg",
 ];
 /*
  * represents what page/image user is on
@@ -39,7 +39,6 @@ function changePage(currentStatus) {
     if ((currentStatus == 1) || (currentStatus == 12)) {
         window.location.assign("https://autecht.github.io/christmas-message/images.html"); 
     }
-    var index = currentStatus - 1;
-    const imageUrl = "images/image" + index.toString();
-    document.getElementById("image-body").style.backgroundImage = imageUrl;
+    var imageIndex = currentStatus - 1;
+    document.getElementById("image-body").style.backgroundImage = imageList[imageIndex];
 }
