@@ -39,6 +39,7 @@ function changePage(currentStatus) {
     if ((currentStatus == 1) || (currentStatus == 12)) {
         window.location.assign("https://autecht.github.io/christmas-message/images.html"); 
     }
-    const imageUrl = "images/image" + (currentStatus - 1);
+    var index = currentStatus - 1;
+    const imageUrl = "images/image" + index.toString();
     document.getElementById("image-body").style.backgroundImage = imageUrl;
 }
