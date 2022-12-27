@@ -1,4 +1,4 @@
-const imageList = [
+var imageList = [
     "images/image1.jpg",
     "images/image2.jpg",
     "images/image3.jpg",
@@ -16,29 +16,48 @@ const imageList = [
  * represents what page/image user is on
  * 0 represents homepage, 1-12 represents image
  */
-var currentStatus = 0; // homepage
+// var someVarName = "value";
+// localStorage.setItem("someVarKey", someVarName);
+// And in any page (like when the page has loaded), get it like:
+
+// var someVarName = localStorage.getItem("someVarKey");
+// TODO: Error here
+if (sessionStorage.getItem("currentStatus") == null) {
+    var currectStatus = 0;
+}
+else {
+    alert("hi");
+    var currentStatus = parseInt(sessionStorage.getItem("currentStatus"));
+}
 
 function cycleLeft() {
     currentStatus -= 1;
-    currentStatus %= 12;
+    if (currentStatus < 0) {
+        currentStatus = 12;
+    }
     changePage(currentStatus);
 }
 
 function cycleRight() {
     currentStatus += 1;
-    currentStatus %= 12;
+    currentStatus %= 13;
     changePage(currentStatus);
 }
 
-function changePage(currentStatus) {
-    if (currentStatus == 0) {
-        window.location.assign("https://autecht.github.io/index.html");
+function changePage(newStatus) {
+    alert(newStatus);
+    if (newStatus == 0) {
+        window.location.assign("file:///C:/Users/atodd/repos/christmas-message/index.html");
         return;
     }
 
-    if ((currentStatus == 1) || (currentStatus == 12)) {
-        window.location.assign("https://autecht.github.io/christmas-message/images.html"); 
+    if ((newStatus == 1) || (newStatus == 12)) {
+        window.location.assign("file:///C:/Users/atodd/repos/christmas-message/images.html"); 
     }
-    var imageIndex = currentStatus - 1;
+    var imageIndex = newStatus - 1;
+    localStorage.currentStatus = currentStatus.toString();
     document.getElementById("image-body").style.backgroundImage = imageList[imageIndex];
 }
+
+function load() {
+    }
