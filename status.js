@@ -54,11 +54,11 @@ function cycleRight() {
 function changePage() {
     sessionStorage.currentStatus = currentStatus.toString();
     if (currentStatus == 0) {
-        window.location.assign("file:///C:/Users/atodd/repos/christmas-message/index.html");
+        window.location.assign("https://autecht.github.io/christmas-message/");
         return;
     }
     if ((currentStatus == 1) || (currentStatus == 12)) {
-        window.location.assign("file:///C:/Users/atodd/repos/christmas-message/images.html"); 
+        window.location.assign("https://autecht.github.io/christmas-message/images.html"); 
     }
 }
 
