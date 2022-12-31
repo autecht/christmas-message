@@ -12,6 +12,8 @@ var imageList = [
     "images/image11.jpg",
     "images/image12.jpg",
 ];
+// document.getElementById("image-body").style.backgroundImage = imageList[3];
+
 /*
  * represents what page/image user is on
  * 0 represents homepage, 1-12 represents image
@@ -22,42 +24,50 @@ var imageList = [
 
 // var someVarName = localStorage.getItem("someVarKey");
 // TODO: Error here
+
+var currentStatus;
+
 if (sessionStorage.getItem("currentStatus") == null) {
-    var currectStatus = 0;
+    currentStatus = 0;
 }
 else {
-    alert("hi");
-    var currentStatus = parseInt(sessionStorage.getItem("currentStatus"));
+    currentStatus = parseInt(sessionStorage.getItem("currentStatus"));
 }
+// console.log(currentStatus)
 
 function cycleLeft() {
     currentStatus -= 1;
     if (currentStatus < 0) {
         currentStatus = 12;
     }
-    changePage(currentStatus);
+    changePage();
+    changeImage();
 }
 
 function cycleRight() {
     currentStatus += 1;
     currentStatus %= 13;
-    changePage(currentStatus);
+    changePage();
+    changeImage()
 }
 
-function changePage(newStatus) {
-    alert(newStatus);
-    if (newStatus == 0) {
+function changePage() {
+    sessionStorage.currentStatus = currentStatus.toString();
+    if (currentStatus == 0) {
         window.location.assign("file:///C:/Users/atodd/repos/christmas-message/index.html");
         return;
     }
-
-    if ((newStatus == 1) || (newStatus == 12)) {
+    if ((currentStatus == 1) || (currentStatus == 12)) {
         window.location.assign("file:///C:/Users/atodd/repos/christmas-message/images.html"); 
     }
-    var imageIndex = newStatus - 1;
-    localStorage.currentStatus = currentStatus.toString();
-    document.getElementById("image-body").style.backgroundImage = imageList[imageIndex];
 }
 
-function load() {
-    }
+function changeImage() {
+    var imageIndex = currentStatus - 1;
+    document.body.style.backgroundImage = 'url(' + imageList[imageIndex] + ')';
+}
+
+function resetCurrentStatus() {
+    currentStatus = 0
+    sessionStorage.currentStatus = "0"
+}
