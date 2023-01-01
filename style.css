@@ -3,8 +3,6 @@ body.red {
 }
 
 #image-body {
-    width: 1200px;
-    height:600px;
     background-size: contain; /* or contain depending on what you want */
     background-position: center center;
     background-repeat: no-repeat;
