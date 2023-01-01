@@ -56,7 +56,7 @@ function cycleRight() {
 function changePage() {
     sessionStorage.currentStatus = currentStatus.toString();
     if (currentStatus == 0) {
-        window.location.assign("https://autecht.github.io/christmas-message/");
+        window.location.assign("file:///C:/Users/atodd/repos/christmas-message/index.html");
         return;
     }
     if ((currentStatus == 1) || (currentStatus == 12)) {
@@ -67,7 +67,7 @@ function changePage() {
 function changeImage() {
     var imageIndex = currentStatus - 1;
     document.body.style.backgroundImage = 'url(' + imageList[imageIndex] + ')';
-    document.getElementById("bottom-text").innerHTML = textList[imageIndex];
+    document.getElementById("bottomMessage").innerHTML = textList[imageIndex];
 }
 
 function resetCurrentStatus() {
