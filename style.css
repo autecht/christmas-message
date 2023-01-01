@@ -58,8 +58,6 @@ i.image-right{
 
 #bottomMessage {
     margin:auto;
-    position:fixed;
-    bottom: 5px;
     font-size: 150%;
     color: white;
     font-family:cursive;
