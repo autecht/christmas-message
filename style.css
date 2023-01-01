@@ -3,11 +3,14 @@ body.red {
 }
 
 #imageBackground {
-    background-size: contain; /* or contain depending on what you want */
-    background-position: center center;
-    text-align:center;
-    margin:auto;
-    padding:0;
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h2 {
