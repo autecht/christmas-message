@@ -58,7 +58,7 @@ i.image-right{
     bottom:5px;
 }
 
-#bottom-text {
+#bottomMessage {
     position:fixed;
     bottom: 5px;
     font-size: 150%;
