@@ -5,7 +5,7 @@ body.red {
 #image-body {
     width: 1200px;
     height:600px;
-    background-size: cover; /* or contain depending on what you want */
+    background-size: contain; /* or contain depending on what you want */
     background-position: center center;
     background-repeat: no-repeat;
     text-align:center;
@@ -59,6 +59,7 @@ i.image-right{
 }
 
 #bottomMessage {
+    margin:auto;
     position:fixed;
     bottom: 5px;
     font-size: 150%;
