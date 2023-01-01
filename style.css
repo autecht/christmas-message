@@ -57,3 +57,12 @@ i.image-right{
     right:5px;
     bottom:5px;
 }
+
+#bottom-text {
+    position:fixed;
+    bottom: 5px;
+    font-size: 150%;
+    color: white;
+    font-family:cursive;
+    text-align: center;
+}

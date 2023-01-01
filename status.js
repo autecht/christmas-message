@@ -12,18 +12,20 @@ var imageList = [
     "images/image11.jpg",
     "images/image12.jpg",
 ];
-// document.getElementById("image-body").style.backgroundImage = imageList[3];
-
-/*
- * represents what page/image user is on
- * 0 represents homepage, 1-12 represents image
- */
-// var someVarName = "value";
-// localStorage.setItem("someVarKey", someVarName);
-// And in any page (like when the page has loaded), get it like:
-
-// var someVarName = localStorage.getItem("someVarKey");
-// TODO: Error here
+var textList = [
+    "I see you!",
+    "Let me up there!",
+    "Guarding the Property",
+    "Let us in!",
+    "There's something under there. . .",
+    "Pets please!",
+    "She's dangerous!",
+    "Naptime!",
+    "Winding down after a long day!",
+    "If I don't move, you can't see me",
+    "After a rager",
+    "Move out!",
+]
 
 var currentStatus;
 
@@ -65,6 +67,7 @@ function changePage() {
 function changeImage() {
     var imageIndex = currentStatus - 1;
     document.body.style.backgroundImage = 'url(' + imageList[imageIndex] + ')';
+    document.getElementById("bottom-text").innerHTML = textList[imageIndex];
 }
 
 function resetCurrentStatus() {
