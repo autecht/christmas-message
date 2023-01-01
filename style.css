@@ -2,10 +2,9 @@ body.red {
     background-color:red
 }
 
-#image-body {
+#imageBackground {
     background-size: contain; /* or contain depending on what you want */
     background-position: center center;
-    background-repeat: no-repeat;
     text-align:center;
     margin:auto;
     padding:0;
